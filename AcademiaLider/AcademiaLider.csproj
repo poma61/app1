@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{AAE0BB89-E351-4152-B887-74E276D68460}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AcademiaLider</RootNamespace>
+    <AssemblyName>AcademiaLider</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data">
+      <HintPath>..\..\..\..\libreria c#\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing">
+      <HintPath>..\..\..\..\libreria c#\zxing.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="CapaAccesoDatos\Accesslogin.cs" />
+    <Compile Include="CapaAccesoDatos\cadCiudades.cs" />
+    <Compile Include="CapaAccesoDatos\cadGrados.cs" />
+    <Compile Include="CapaAccesoDatos\cadModalidades.cs" />
+    <Compile Include="CapaAccesoDatos\CadParticipante.cs" />
+    <Compile Include="CapaAccesoDatos\cadProfesiones.cs" />
+    <Compile Include="CapaAccesoDatos\cadUsuarios.cs" />
+    <Compile Include="CapaLogicaNegocio\clnCiudades.cs" />
+    <Compile Include="CapaLogicaNegocio\clnGrados.cs" />
+    <Compile Include="CapaLogicaNegocio\clnModalidades.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnParticipante.cs" />
+    <Compile Include="CapaLogicaNegocio\clnProfesiones.cs" />
+    <Compile Include="CapaLogicaNegocio\clnUsuarios.cs" />
+    <Compile Include="CapaLogicaNegocio\logicaLogin.cs" />
+    <Compile Include="CapaPresentacion\frmCatalogos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmCatalogos.Designer.cs">
+      <DependentUpon>frmCatalogos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmCiudades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmCiudades.Designer.cs">
+      <DependentUpon>frmCiudades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmEventos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmEventos.Designer.cs">
+      <DependentUpon>frmEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmGradosAcademicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmGradosAcademicos.Designer.cs">
+      <DependentUpon>frmGradosAcademicos.cs</DependentUpon>
+=======
+    <Compile Include="CapaAccesoDatos\CadDocente.cs" />
+    <Compile Include="CapaAccesoDatos\CadEvento.cs" />
+    <Compile Include="CapaAccesoDatos\CadInscripcion.cs" />
+    <Compile Include="CapaAccesoDatos\CadParticipante.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnDocente.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnEvento.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnInscripcion.cs" />
+    <Compile Include="CapaLogicaNegocio\ClnParticipante.cs" />
+    <Compile Include="CapaPresentacion\frmDocente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmDocente.Designer.cs">
+      <DependentUpon>frmDocente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmEvento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmEvento.Designer.cs">
+      <DependentUpon>frmEvento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmInscripcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmInscripcion.Designer.cs">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmListaParticipantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmListaParticipantes.Designer.cs">
+      <DependentUpon>frmListaParticipantes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMain.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmMain.Designer.cs">
+      <DependentUpon>frmMain.cs</DependentUpon>
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
+    </Compile>
+    <Compile Include="CapaPresentacion\frmParticipante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmParticipante.Designer.cs">
+      <DependentUpon>frmParticipante.cs</DependentUpon>
+    </Compile>
+<<<<<<< HEAD
+    <Compile Include="CapaPresentacion\frmProfesiones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmProfesiones.Designer.cs">
+      <DependentUpon>frmProfesiones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmUsuarios.Designer.cs">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="CapaPresentacion\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ConexionBaseDatos.cs" />
+    <Compile Include="Entidades\Ciudades.cs" />
+    <Compile Include="Entidades\Grados.cs" />
+    <Compile Include="Entidades\Modalidades.cs" />
+=======
+    <Compile Include="CapaPresentacion\frmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CapaPresentacion\frmPrincipal.Designer.cs">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Core\ConexionBaseDatos.cs" />
+    <Compile Include="Entidades\Docente.cs" />
+    <Compile Include="Entidades\Evento.cs" />
+    <Compile Include="Entidades\Inscripcion.cs" />
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
+    <Compile Include="Entidades\Participante.cs" />
+    <Compile Include="Entidades\Profesiones.cs" />
+    <Compile Include="Entidades\Usuarios.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
+    <EmbeddedResource Include="CapaPresentacion\frmCatalogos.resx">
+      <DependentUpon>frmCatalogos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmCiudades.resx">
+      <DependentUpon>frmCiudades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmEventos.resx">
+      <DependentUpon>frmEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmGradosAcademicos.resx">
+      <DependentUpon>frmGradosAcademicos.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="CapaPresentacion\frmDocente.resx">
+      <DependentUpon>frmDocente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmEvento.resx">
+      <DependentUpon>frmEvento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmInscripcion.resx">
+      <DependentUpon>frmInscripcion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmListaParticipantes.resx">
+      <DependentUpon>frmListaParticipantes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmMain.resx">
+      <DependentUpon>frmMain.cs</DependentUpon>
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmParticipante.resx">
+      <DependentUpon>frmParticipante.cs</DependentUpon>
+    </EmbeddedResource>
+<<<<<<< HEAD
+    <EmbeddedResource Include="CapaPresentacion\frmProfesiones.resx">
+      <DependentUpon>frmProfesiones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\frmUsuarios.resx">
+      <DependentUpon>frmUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CapaPresentacion\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="CapaPresentacion\frmPrincipal.resx">
+      <DependentUpon>frmPrincipal.cs</DependentUpon>
+>>>>>>> 1c991e5d116dbbb484a490b214152649d586ec41
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include=".editorconfig" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo2022.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calculator.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\block.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\accept.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unlock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_cat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\text_page.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chart_up.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
